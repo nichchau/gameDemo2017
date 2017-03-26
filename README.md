@@ -1,12 +1,10 @@
-
-
-#Install Phaser
+#Install Phaser<br/>
 npm install phaser-ce@2.7.5
 
-#Install Ang2-phaser
+#Install Ang2-phaser<br/>
 npm install ang2-phaser --save
 
-#Install AngularFire2
+#Install AngularFire2<br/>
 npm install firebase angularfire2 --save
 
 # GameDemo2017
