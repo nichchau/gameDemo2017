@@ -1,5 +1,5 @@
 #Install Phaser<br/>
-npm install phaser-ce@2.7.5
+npm install phaser-ce@2.7.5 --save
 
 #Install Ang2-phaser<br/>
 npm install ang2-phaser --save
