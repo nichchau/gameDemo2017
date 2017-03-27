@@ -1,4 +1,13 @@
-# Angular2fb
+#Install Phaser<br/>
+npm install phaser-ce@2.7.5 --save
+
+#Install Ang2-phaser<br/>
+npm install ang2-phaser --save
+
+#Install AngularFire2<br/>
+npm install firebase angularfire2 --save
+
+# GameDemo2017
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
