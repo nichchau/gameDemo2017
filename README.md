@@ -12,9 +12,6 @@ Build your project<br/>
 ng build --prod<br/>
 ng build --prod --bh /[your-project-folder-name]/dist/ <br/>
 
-#index.html<br/>
-<base href="/[your-project-folder-name]/dist/"> <br/>
-
 # GameDemo2017
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
