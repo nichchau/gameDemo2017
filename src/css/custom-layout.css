@@ -17,3 +17,272 @@ app-root {
             color: #FFFFFF;
             font-weight: bold;
 }
+/* app css stylesheet */
+
+.wrapper {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 10px;
+  font-family: 'open_sans';
+}
+
+.wrapper ol, .wrapper ul{
+  font-weight: 200;
+  margin: 20px 0;
+}
+
+.wrapper ol li, .wrapper ul li {
+  margin: 10px 0;
+}
+
+.wrapper.welcome-wrapper .button {
+  margin: 60px auto 0;
+}
+
+.wrapper h1 {
+  font-size: 70px;
+  font-family: 'open_sans';
+  text-align: center;
+  text-transform: uppercase;
+  color: #444;
+}
+
+.wrapper h1.results {
+  margin-bottom: 0;
+  font-size: 45px; 
+}
+
+.wrapper h2 {
+  font-family: 'open_sans';
+  color: #222;
+}
+
+.wrapper h3 {
+  font-family: 'open_sans';
+  color: #222;
+  text-align: center;
+}
+
+.wrapper h4 {
+  font-family: 'open_sans';
+  color: #222;
+  text-align: center;
+}
+
+.wrapper .button-group {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wrapper .button-group .button {
+  margin: 0 20px;
+  float: left;
+}
+
+.wrapper .share a {
+  color: #333;
+  transition: color .2s;
+}
+
+.wrapper .share a:hover {
+  color: #AAA;
+}
+
+.fadeIn {
+  opacity: 0;
+  -webkit-animation-name: fadeIn; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards; 
+}
+
+.fadeIn1 {
+  animation-delay: 0s;
+}
+.fadeIn15 {
+  animation-delay: .5s;
+}
+.fadeIn2 {
+  animation-delay: 1s;
+}
+.fadeIn25 {
+  animation-delay: 1.5s;
+}
+.fadeIn3 {
+  animation-delay: 2s;
+}
+.fadeIn4 {
+  animation-delay: 3s;
+}
+.fadeIn5 {
+  animation-delay: 4s;
+}
+.fadeIn10 {
+  animation-delay: 6s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeIn {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes fadeIn {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+.game {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.game canvas {
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  margin: 50px auto 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  height: 50px;
+  width: 200px;
+  display: table;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.55);
+  -webkit-transition: background .5s;
+  transition: background .5s;
+  cursor: pointer;
+}
+.button span {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: #2D3142;
+  box-shadow: 0 0 0 2px #2D3142 inset;
+  background: transparent;
+}
+.button .away {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.button .over {
+  display: none;
+}
+.button:hover span.away {
+  display: none;
+}
+.button:hover span.over {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  box-shadow: none;
+}
+.button:hover {
+  background: #2D3142;
+}
+
+.hidden {
+  display: none;
+}
+
+.fadeOut {
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.preload {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -42px 0 0 -12px;
+  transform: rotate(45deg);
+  animation: spin 1s infinite linear;
+}
+@keyframes spin {
+  0% { -webkit-transform:rotate(0deg); width: 60px; height: 60px; background: #999; }
+  50% { -webkit-transform:rotate(180deg); width: 70px; height: 70px;  background: #333; }
+  100% { -webkit-transform:rotate(360deg); width: 60px; height: 60px; background: #999; }
+}
+
+.tips.button-group {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+
+}
+
+.tips.button-group .inner {
+  margin: 0 auto;
+  width: 300px;
+  overflow: hidden;
+}
+
+.tips.button-group a {
+  float: left;
+  width: 20%;
+  margin: 0 2.5%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.wrapper ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}
+
+@media (min-width:320px) {
+  .wrapper .button-group {
+    width: 240px;
+  }
+
+  .wrapper .button-group .button {
+    margin-top: 10px;
+  }
+}
+@media (min-width:481px) {
+
+}
+@media (min-width:641px) {
+  .wrapper .button-group {
+    width: 480px;
+  }
+}
+@media (min-width:961px) {
+
+}
+@media (min-width:1025px) {
+
+}
+@media (min-width:1281px) {
+
+}

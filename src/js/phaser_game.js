@@ -7,8 +7,8 @@ __phaser = {
     game:{
 
       //-------------------
-      init(canvasEle, appComponent,dictionary){
-               console.log('Dictionary API');// for future use Dictionary API
+      init(canvasEle, phaserComponent){
+               
               // create game object
               var game = new Phaser.Game(1280, 600, Phaser.AUTO, canvasEle, { preload: preload, create: create, update: update });
               var gameState = "preload"
@@ -16,14 +16,16 @@ __phaser = {
               var phaser_logo;
               var introText;
               var gameTitle;
-
-      
+              var gameWord= localStorage.getItem("word");//get Word from session
+              //localStorage.removeItem("word");
               // assign it
               __phaser.gameObj = game;
+             console.log(gameWord);
+             
 
+  
 
-
-            //-----------------------  PRELOAD
+                            //-----------------------  PRELOAD
             function preload() {
 
                 // set canvas color
