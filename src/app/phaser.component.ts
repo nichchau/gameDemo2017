@@ -15,9 +15,9 @@ export class PhaserComponent{
    
     constructor (private _phaserService:PhaserService){}
     
-    ngOnInit(phaser:any){ 
+   a(phaser:any){ 
          this.getWord();
-         this.getMusic();
+       //  this.getMusic();
    }
    getWord(){  
        let a:string[];

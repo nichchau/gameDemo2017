@@ -1,0 +1,129 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@telerik/kendo-theme-default",
+        "scope": "@telerik",
+        "escapedName": "@telerik%2fkendo-theme-default",
+        "name": "@telerik/kendo-theme-default",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\NichChau\\Documents\\GitHub\\gameDemo2017"
+    ]
+  ],
+  "_from": "@telerik/kendo-theme-default@latest",
+  "_id": "@telerik/kendo-theme-default@1.33.4",
+  "_inCache": true,
+  "_location": "/@telerik/kendo-theme-default",
+  "_nodeVersion": "6.9.2",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/kendo-theme-default-1.33.4.tgz_1483369279082_0.2538528898730874"
+  },
+  "_npmUser": {
+    "name": "telerik",
+    "email": "npm@telerik.com"
+  },
+  "_npmVersion": "3.10.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@telerik/kendo-theme-default",
+    "scope": "@telerik",
+    "escapedName": "@telerik%2fkendo-theme-default",
+    "name": "@telerik/kendo-theme-default",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@telerik/kendo-theme-default/-/kendo-theme-default-1.33.4.tgz",
+  "_shasum": "5c259f4dc0f9ef17d6a68ec56e6b8dad55b7a141",
+  "_shrinkwrap": null,
+  "_spec": "@telerik/kendo-theme-default",
+  "_where": "C:\\Users\\NichChau\\Documents\\GitHub\\gameDemo2017",
+  "author": {
+    "name": "Progress"
+  },
+  "bugs": {
+    "url": "https://github.com/telerik/kendo-theme-default/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test",
+      "commit-msg": "validate-commit-msg"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert"
+      ],
+      "warnOnFail": false,
+      "maxSubjectLength": 100
+    }
+  },
+  "dependencies": {},
+  "description": "SASS resources for the default Kendo UI theme",
+  "devDependencies": {
+    "@telerik/kendo-common-tasks": "^2.0.0",
+    "cz-conventional-changelog": "^1.1.5",
+    "ghooks": "^1.0.3",
+    "glob": "^7.0.5",
+    "mime": "^1.3.4",
+    "sass-lint": "^1.7.0",
+    "semantic-release": "^4.3.5",
+    "validate-commit-msg": "^1.1.1",
+    "webpack": "^1.13.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "5c259f4dc0f9ef17d6a68ec56e6b8dad55b7a141",
+    "tarball": "https://registry.npmjs.org/@telerik/kendo-theme-default/-/kendo-theme-default-1.33.4.tgz"
+  },
+  "gitHead": "cf732df761defec8628c82ba536d06f6085a3e4b",
+  "homepage": "https://github.com/telerik/kendo-theme-default#readme",
+  "keywords": [
+    "Kendo UI",
+    "Theme"
+  ],
+  "license": "Apache-2.0",
+  "main": "styles/packages/all.scss",
+  "maintainers": [
+    {
+      "name": "telerik",
+      "email": "npm@telerik.com"
+    }
+  ],
+  "name": "@telerik/kendo-theme-default",
+  "optionalDependencies": {},
+  "readme": "[![Build Status](https://travis-ci.org/telerik/kendo-theme-default.svg?branch=master)](https://travis-ci.org/telerik/kendo-theme-default)\n[![npm version](https://badge.fury.io/js/%40telerik%2Fkendo-theme-default.svg)](https://badge.fury.io/js/%40telerik%2Fkendo-theme-default)\n\n\n# Kendo UI Default Theme\n\n* [Overview](https://github.com/telerik/kendo-default-theme#overview)\n* [Basic Usage](https://github.com/telerik/kendo-default-theme#basic-usage)\n\n## Overview\n\nThe Kendo UI Default Theme is a SCSS-based theme for the Kendo UI components.\n\nCurrently, it is available for the following suites:  \n\n* Kendo UI for React.\n* Kendo UI for Angular 2.\n\nWe are working on providing support for the Default Theme in Kendo UI jQuery suite too.\n\n## Basic Usage\n\nFor more information on how to use the Default Theme in Angular 2 and React projects, refer to [its introductory topic](docs/index.md).\n\n## Customization\n\nTo customize the Default Theme in one swoop, use the colors defined in the [`styles/_variables.scss` file](styles/_variables.scss). Any change in this file is propagated to every component.\n\nTo style a specific component, use the variables used in its specific `.scss` file.\n\nThe theme is built by running `npm run build`. The `dist/all.css` file contains the complete theme that you can use in your project.\n\n## Development\n\nStyles are split into components and the dependencies are managed by the [`import-once` mixin](styles/mixins/_import-once.scss). When configuring the styles, define them within an `import-once` block so that they are bundled once when required from multiple files.\n\nDuring development, the SCSS files are linted on every `commit` and built on every `push` command. The theme package can be tested against a component by linking the theme in the components package.\n\nUpon build, browser-specific properties are generated through the [PostCSS autoprefixer](https://github.com/postcss/autoprefixer).\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telerik/kendo-theme-default.git"
+  },
+  "scripts": {
+    "build": "webpack --optimize-minimize --bail",
+    "embed-assets": "node build/embed-assets.js",
+    "lint": "sass-lint -v -c ./sass-lint.yml",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "start": "webpack-dev-server",
+    "test": "npm run lint && npm run build"
+  },
+  "version": "1.33.4"
+}
