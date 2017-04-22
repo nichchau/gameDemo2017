@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { NG2_PHASER } from 'ang2-phaser/ng2phaser';
 import { PhaserComponent } from './phaser.component';
 import { WelcomeComponent } from './welcome.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
 const appRoutes:Routes=[
   {path:'welcome',component:WelcomeComponent},
@@ -21,7 +23,9 @@ const appRoutes:Routes=[
     HttpModule,
     JsonpModule,
     RouterModule.forRoot(appRoutes),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    BrowserAnimationsModule,
+    ButtonsModule
   ],
   declarations: [ AppComponent ,WelcomeComponent,PhaserComponent,NG2_PHASER],
   bootstrap: [ AppComponent ],

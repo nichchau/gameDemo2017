@@ -16,11 +16,17 @@ __phaser = {
               var phaser_logo;
               var introText;
               var gameTitle;
-              var gameWord= localStorage.getItem("word");//get Word from session
+              var gameWord=new Array(10);
+              for (i = 0; i < 10; i++) { 
+                 gameWord[i]=localStorage.getItem("word_"+i);
+                 console.log(gameWord[i]);
+             }
+             // var gameWord= localStorage.getItem("word");//get Word from session
+           // var gameWord= JSON.parse(localStorage.getItem("word"));
               //localStorage.removeItem("word");
               // assign it
               __phaser.gameObj = game;
-             console.log(gameWord);
+             //console.log(gameWord);
              
 
   

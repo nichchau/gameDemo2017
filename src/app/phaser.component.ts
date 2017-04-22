@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component,Input} from '@angular/core';
 import {PhaserService} from './phaser.service';
 import {Observable} from 'rxjs/Observable';
 
@@ -12,21 +12,28 @@ declare var __phaser:any;
 
 export class PhaserComponent{
     phaser:any;
-
+   
     constructor (private _phaserService:PhaserService){}
     
-    ngOnInit(phaser:any){
-    
-      this.getWord();
+    ngOnInit(phaser:any){ 
+         this.getWord();
+         this.getMusic();
    }
    getWord(){  
-        
-       this._phaserService.search().subscribe(
-              data=> localStorage.setItem("word", JSON.stringify(data.Word)),
+       let a:string[];
+     for(let i=0;i<10;++i){
+       this._phaserService.search().subscribe(             
+              data=> localStorage.setItem("word_"+i, JSON.stringify(data.Word)),
               error => alert(error),
               ()=>console.log('Finished'),
             );
-          
+        } 
+    }
+    getMusic(){
+        var audio= new Audio;
+        audio.src="background_music.wav";
+        audio.load();
+        audio.play();
     }
 
    phaserLink1(phaser:any){
